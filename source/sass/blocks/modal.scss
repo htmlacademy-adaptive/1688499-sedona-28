@@ -1,0 +1,60 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: variables.$background-color-white;
+  min-width: 320px;
+  margin: auto
+
+  &--error {
+    padding: 45px 41px 35px;
+  }
+}
+
+.modal__wrapper {
+  background-color: variables.$background-color-white;
+
+  &--error {
+    padding-bottom: 28px;
+  }
+
+  &--success {
+    padding: 44px 39px 34px 37px;
+  }
+}
+
+.modal__title {
+  @include mixins.texts (700, 18px, 26px);
+  color: variables.$title-color-black;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 28px;
+}
+
+.modal__text {
+  color: variables.$text-color-main;
+  text-align: center;
+  margin: 0;
+}
+
+.modal__button-wrapper {
+  background-color: variables.$background-input;
+  padding: 20px;
+  width: 100%;
+}
+
+.modal__button {
+  font-size: 18px;
+  padding: 18px 64px;
+
+  &--error {
+    width: 180px;
+  }
+
+  &--success {
+    width: 100%;
+  }
+}

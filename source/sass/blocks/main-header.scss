@@ -1,0 +1,16 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.main-header {
+  position: relative;
+  min-height: 56px;
+  background-color: variables.$background-color-white;
+}
+
+.main-header__logo {
+  position: absolute;
+  width: 185px;
+  height: 96px;
+  left: 50%;
+  transform: translateX(-50%);
+}

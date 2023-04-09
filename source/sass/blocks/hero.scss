@@ -1,0 +1,42 @@
+@use "global/variables.scss";
+
+.hero__wrapper {
+  background-image: url(../img/hero-bg-mobile.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-color: variables.$background-color-blue;
+  min-height: 214px;
+  margin-top: -56px;
+
+  &--index {
+    min-height: 389px;
+  }
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+  min-width: 229px;
+  min-height: 39px;
+  padding: 108px 0px 67px;
+
+  &--index {
+    padding: 90px 0px 85px;
+    margin-top: 56px;
+  }
+}
+
+.hero__description {
+  padding: 30px 20px 17px;
+
+  &--index {
+    position: relative;
+    padding: 32px 18px 16px;
+  }
+
+  &--form {
+    padding: 36px 20px 32px;
+  }
+}
+

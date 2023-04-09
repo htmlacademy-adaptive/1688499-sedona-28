@@ -1,0 +1,71 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.feedback-form__field-group {
+  padding: 20px 20px 39px 24px;
+  border: none;
+  margin: 0;
+}
+
+.feedback-form__legend {
+  @include mixins.texts (700, 18px, 26px);
+  color: variables.$title-color-black;
+  text-align: center;
+  padding: 20px 0 20px;
+  border-top: 1px solid variables.$border-light-grey;
+  width: 100%;
+}
+
+.feedback-form__wrapper {
+  margin: 0 0 16px 0;
+}
+
+.feedback-form__input {
+  @include mixins.texts (700, 18px, 26px, none);
+  font-family: inherit;
+  background-color: variables.$background-input;
+  height: 58px;
+  width: 280px;
+  border: none;
+  padding: 16px;
+  outline: none;
+
+  &::placeholder {
+    color: variables.$text-placeholder;
+    font-family: inherit;
+  }
+
+  &--textarea {
+    display:block;
+    width: 279px;
+    height: 150px;
+    margin-bottom: 56px;
+  }
+}
+
+.feedback-form__list {
+  @include mixins.list-reset;
+}
+
+.feedback-form__control {
+  @include mixins.texts (700, 18px, 26px, none);
+  color: variables.$title-color-black;
+  padding: 10px 0px;
+}
+
+.feedback-form__button-container {
+  padding: 0 20px 22px 20px;
+}
+
+.feedback-form__button {
+  width: 280px;
+  padding: 16px 0;
+  margin-bottom: 3px;
+}
+
+.feedback-form__footnote {
+  @include mixins.texts (400, 12px, 21px);
+  color: variables.$text-footnote;
+  text-align: right;
+  margin: 0;
+}

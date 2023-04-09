@@ -1,0 +1,25 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.hotel-search {
+  padding: 30px 18px 49px;
+  background-color: variables.$background-color-white;
+}
+
+.hotel-search__title {
+  @include mixins.texts (700, 18px, 26px);
+  color: variables.$title-color-black;
+  text-align: center;
+  margin: 0 0 21px 0;
+}
+
+.hotel-search__text {
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.hotel-search__link {
+  display: block;
+  width: 284px;
+  padding: 16px 49px;
+}

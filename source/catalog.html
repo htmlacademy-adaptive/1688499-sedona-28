@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона - Фото и видео</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -35,7 +37,9 @@
   </header>
   <main class="main-container">
     <section class="hero">
-      <img class="hero__image" src="img/hero-text-inner.svg" alt="Sedona" width="229" height="39">
+      <div class="hero__wrapper">
+        <img class="hero__image" src="img/hero-text-inner.svg" alt="Sedona" width="229" height="39">
+      </div>
       <div class="hero__description hero-description">
         <h1 class="hero-description__title">Фото и видео</h1>
         <p class="hero-description__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
@@ -90,8 +94,8 @@
         <h2 class="video__description-title">Все еще сомневаетесь?</h2>
         <p class="video__description-text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </div>
-      <img class="video__video" src="img/video-mobile.jpg" alt="Заставка видео о Седоне" width="280" height="177">
-      <button class="video__button">Play</button>
+      <img class="video__video" src="img/video-mobile.jpg" alt="Заставка видео о Седоне" width="320" height="177">
+      <button class="video__button"><span class="visually-hidden">Play</span></button>
     </section>
   </main>
   <footer class="main-footer">
@@ -118,10 +122,13 @@
           </li>
         </ul>
       </div>
-      <div class="main-footer__copyright copyright">
+      <div class="main-footer__copyright">
         <h2 class="visually-hidden">Сайт сделан</h2>
-        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <p class="copyright__text">Разработано</p>
+        <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+          <span class="main-footer__copyright-text">Разработано</span>
+          <svg width="29" height="35" viewBox="0 0 29 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M14.65 0.449951H14.55L1.05 1.84995V26.55L14.55 34.5499L27.95 26.55V1.84995L14.65 0.449951ZM26.05 12.55L14.55 5.74995V5.64995H14.45L14.35 5.54995V5.64995L2.95 12.55V3.54995L14.45 2.34995L26.05 3.54995V12.55ZM14.45 7.24995L25.95 13.95L21.45 16.55L14.35 12.35V13.75L20.25 17.25L19.35 17.75L14.35 14.75V16.15L18.15 18.45L17.35 18.95L14.35 17.15V18.55L16.25 19.65L14.45 20.75L3.05 14.05L14.45 7.24995ZM2.95 15.55L14.35 22.35V23.35L6.45 18.65V20.05L14.45 24.85V25.95L6.45 21.25V22.65L14.45 27.45L22.55 22.55V17.35L25.95 15.35V25.35L14.45 32.25L2.95 25.45V15.55Z" fill="black" />
+          </svg>
         </a>
       </div>
     </div>
