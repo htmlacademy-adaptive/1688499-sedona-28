@@ -1,1 +1,22 @@
-// Начните писать стили здесь
+//Global
+@use "global/fonts.scss";
+@use "global/common.scss";
+//Variables and mixins
+@use "global/variables.scss";
+@use "global/mixins.scss";
+//Blocks
+@use "blocks/page.scss";
+@use "blocks/main-header.scss";
+@use "blocks/main-nav.scss";
+@use "blocks/hero.scss";
+@use "blocks/hero-description.scss";
+@use "blocks/advantages.scss";
+@use "blocks/features.scss";
+@use "blocks/hotel-search.scss";
+@use "blocks/button.scss";
+@use "blocks/main-footer.scss";
+@use "blocks/social.scss";
+@use "blocks/catalog.scss";
+@use "blocks/video.scss";
+@use "blocks/feedback-form.scss";
+@use "blocks/modal.scss";

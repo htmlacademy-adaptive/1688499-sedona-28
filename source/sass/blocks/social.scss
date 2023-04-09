@@ -1,0 +1,16 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.social__list {
+  @include mixins.list-reset;
+  min-width: 154px;
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.social__item {
+  width: 48px;
+  height: 48px;
+  background-color: variables.$background-color-blue;
+}

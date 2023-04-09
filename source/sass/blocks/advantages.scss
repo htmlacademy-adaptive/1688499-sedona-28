@@ -1,0 +1,41 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.advantages__list {
+  @include mixins.list-reset;
+  counter-reset: section;
+}
+
+.advantages__title {
+  @include mixins.texts (700, 18px, 26px);
+  margin: 0;
+  padding: 0 0 11px 0;
+  text-align: center;
+}
+
+.advantages__text {
+  margin: 0 auto;
+  text-align: center;
+
+&::before {
+    counter-increment: section;
+    white-space: pre;
+    content: "— №" counter(section) "—\A";
+    }
+}
+
+.advantages__description {
+  padding: 37px 18px;
+}
+
+.advantages__item--blue {
+  background-color: variables.$background-color-blue;
+  color: variables.$text-color-second;
+}
+
+.advantages__item--grey {
+  background-color: variables.$background-color-grey;
+  padding: 24px 26px;
+  border-bottom: 1px solid variables.$border-grey;
+}
+

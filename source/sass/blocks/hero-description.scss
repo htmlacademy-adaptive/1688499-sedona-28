@@ -1,0 +1,17 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.hero-description__title {
+  @include mixins.texts (700, 18px, 26px);
+  margin: 0;
+  margin-bottom: 35px;
+  color: variables.$title-color-black;
+  text-align: center;
+}
+
+.hero-description__text {
+  @include mixins.texts (400, 14px, 21px);
+  margin: 0;
+  color: variables.$text-color-main;
+  text-align: center;
+}

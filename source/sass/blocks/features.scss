@@ -1,0 +1,27 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.features {
+  @include mixins.list-reset;
+  background-color: variables.$background-color-white;
+  color: variables.$text-color-main;
+}
+
+.features__item {
+  padding: 23px 18px 25px 65px;
+}
+
+.features__title {
+  @include mixins.texts (700, 18px, 26px);
+  text-align: left;
+  color: variables.$title-color-black;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.features__text {
+  margin: 0;
+  text-align: left;
+}
+
+
