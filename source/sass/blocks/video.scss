@@ -8,6 +8,7 @@
 
 .video__description-title {
   @include mixins.texts (700, 18px, 26px);
+  color: variables.$title-color-black;
   margin: 0;
   padding-bottom: 32px;
 }

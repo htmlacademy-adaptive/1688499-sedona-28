@@ -22,7 +22,7 @@
 
 .feedback-form__input {
   @include mixins.texts (700, 18px, 26px, none);
-  color: variables.$title-color-black;
+  font-family: inherit;
   background-color: variables.$background-input;
   height: 58px;
   width: 280px;
@@ -30,15 +30,17 @@
   padding: 16px;
   outline: none;
 
-&::placeholder {
-  color: variables.$text-placeholder;
-}
-&--textarea {
-  display:block;
-  width: 279px;
-  height: 150px;
-  margin-bottom: 56px;
-}
+  &::placeholder {
+    color: variables.$text-placeholder;
+    font-family: inherit;
+  }
+
+  &--textarea {
+    display:block;
+    width: 279px;
+    height: 150px;
+    margin-bottom: 56px;
+  }
 }
 
 .feedback-form__list {

@@ -12,23 +12,23 @@
   &--index {
     min-height: 389px;
   }
-  }
+}
 
-  .hero__image {
-    display: block;
-    margin: 0 auto;
-    min-width: 229px;
-    min-height: 39px;
-    padding: 108px 0px 67px;
+.hero__image {
+  display: block;
+  margin: 0 auto;
+  min-width: 229px;
+  min-height: 39px;
+  padding: 108px 0px 67px;
 
   &--index {
     padding: 90px 0px 85px;
     margin-top: 56px;
   }
-  }
+}
 
-  .hero__description {
-    padding: 30px 20px 17px;
+.hero__description {
+  padding: 30px 20px 17px;
 
   &--index {
     position: relative;
@@ -38,5 +38,5 @@
   &--form {
     padding: 36px 20px 32px;
   }
-  }
+}
 

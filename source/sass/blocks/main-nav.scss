@@ -30,14 +30,17 @@
   border:none;
   background-color: variables.$background-color-white;
   position: relative;
+  top: 17px;
+  left: 280px;
+
   &::after {
     content: " ";
     width: 23px;
     height: 4px;
     background-color: variables.$background-color-blue;
     position: absolute;
-    top: 17px;
-    left: 280px;
+    top: 0px;
+    left: 0px;
     box-shadow: 0 8px 0 0 variables.$background-color-blue, 0 16px 0 0 variables.$background-color-blue;
   }
 }

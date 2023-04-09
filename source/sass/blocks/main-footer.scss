@@ -10,12 +10,12 @@
 
 .main-footer__link {
   @include mixins.texts (700, 21px, 26px);
-  color: variables.$text-color-main;
+  color: variables.$title-color-black;
   margin-bottom: 30px;
 }
 
 .main-footer__copyright-link {
-  color: variables.$text-color-main;
+  color: variables.$title-color-black;
   display: flex;
   align-items: center;
   justify-content: center;

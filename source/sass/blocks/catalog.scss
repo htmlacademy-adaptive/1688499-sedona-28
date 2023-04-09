@@ -13,9 +13,9 @@
   padding: 26px 20px 25px 20px;
   border-top: 1px solid variables.$border-light-grey;
 
-&:last-child {
-  border-bottom: 1px solid variables.$border-light-grey;
-}
+  &:last-child {
+    border-bottom: 1px solid variables.$border-light-grey;
+  }
 }
 
 .catalog__item-text {
@@ -24,6 +24,7 @@
 
 .catalog__item-title {
   @include mixins.texts (700, 14px, 21px);
+  color: variables.$title-color-black;
   margin: 0;
 }
 
@@ -35,6 +36,7 @@
 
 .catalog__item-likes {
   @include mixins.texts (700, 14px, 21px);
+  font-family: inherit;
   background-color: variables.$background-color-white;
   border: none;
   padding-left: 37px;

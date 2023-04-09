@@ -8,20 +8,25 @@
 
 .advantages__title {
   @include mixins.texts (700, 18px, 26px);
+  color: variables.$title-color-black;
   margin: 0;
   padding: 0 0 11px 0;
   text-align: center;
+
+  &--blue {
+    color: variables.$text-color-second;
+  }
 }
 
 .advantages__text {
   margin: 0 auto;
   text-align: center;
 
-&::before {
+  &::before {
     counter-increment: section;
     white-space: pre;
     content: "— №" counter(section) "—\A";
-    }
+  }
 }
 
 .advantages__description {

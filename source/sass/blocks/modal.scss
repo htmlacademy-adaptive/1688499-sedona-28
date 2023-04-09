@@ -8,30 +8,27 @@
   background-color: variables.$background-color-white;
   min-width: 320px;
   margin: auto
-}
 
-.modal-error {
-  padding: 45px 41px 35px;
-}
-
-.modal-success {
-
+  &--error {
+    padding: 45px 41px 35px;
+  }
 }
 
 .modal__wrapper {
   background-color: variables.$background-color-white;
 
-&--error {
-  padding-bottom: 28px;
-}
+  &--error {
+    padding-bottom: 28px;
+  }
 
-&--success {
-  padding: 44px 39px 34px 37px;
-}
+  &--success {
+    padding: 44px 39px 34px 37px;
+  }
 }
 
 .modal__title {
   @include mixins.texts (700, 18px, 26px);
+  color: variables.$title-color-black;
   text-align: center;
   margin: 0;
   margin-bottom: 28px;
@@ -53,11 +50,11 @@
   font-size: 18px;
   padding: 18px 64px;
 
-&--error {
-  width: 180px;
+  &--error {
+    width: 180px;
   }
 
-&--success {
-  width: 100%;
-}
+  &--success {
+    width: 100%;
+  }
 }
