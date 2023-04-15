@@ -6,11 +6,26 @@
   flex-direction: column;
   align-items: center;
   background-color: variables.$background-color-white;
-  min-width: 320px;
-  margin: auto
+  width: 100%;
+  margin: auto;
 
   &--error {
     padding: 45px 41px 35px;
+    min-height: 323px;
+  }
+
+  &--success {
+    min-height: 347px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &--failure {
+      width: 400px;
+    }
+
+    &--success {
+      width: 640px;
+    }
   }
 }
 

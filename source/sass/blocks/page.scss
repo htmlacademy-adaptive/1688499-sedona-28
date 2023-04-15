@@ -3,14 +3,23 @@
 
 .page {
   min-height: 100%;
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$background-color-desktop;
+    padding: 0 40px;
+  }
 }
 
 .page__body {
   @include mixins.texts (400, 14px, 21px, uppercase);
   margin: 0 auto;
   min-width: 320px;
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   color: variables.$text-color-main;
   background-color: variables.$background-color-white;
   overflow-x: hidden;
+
+  @media (min-width: variables.$desktop-width) {
+    box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
 }
