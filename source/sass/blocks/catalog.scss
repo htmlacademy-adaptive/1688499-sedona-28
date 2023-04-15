@@ -7,19 +7,55 @@
 
 .catalog__list {
   @include mixins.list-reset;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .catalog__item {
   padding: 26px 20px 25px 20px;
   border-top: 1px solid variables.$border-light-grey;
 
-  &:last-child {
+  @media (min-width: variables.$tablet-width) {
+    &:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  /*&:last-child {
     border-bottom: 1px solid variables.$border-light-grey;
+  }*/
+}
+
+.catalog__item-image {
+  width: 100%;
+  height: 280px;
+
+  @media (min-width: variables.$tablet-width) {
+    height: 267px;
+  }
+
+  &--first {
+    @media (min-width: variables.$tablet-width) {
+      height: 400px;
+    }
   }
 }
 
 .catalog__item-text {
   padding-top: 15px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    justify-content:space-between;
+  }
 }
 
 .catalog__item-title {

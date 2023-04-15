@@ -1,10 +1,23 @@
 @use "global/variables.scss";
 @use "global/mixins.scss";
 
+.feedback-form {
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .feedback-form__field-group {
   padding: 20px 20px 39px 24px;
   border: none;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    &:nth-child(n + 3) {
+      grid-column: 1 / -1;
+    }
+  }
 }
 
 .feedback-form__legend {
@@ -36,7 +49,7 @@
   }
 
   &--textarea {
-    display:block;
+    display: block;
     width: 279px;
     height: 150px;
     margin-bottom: 56px;
@@ -50,11 +63,18 @@
 .feedback-form__control {
   @include mixins.texts (700, 18px, 26px, none);
   color: variables.$title-color-black;
-  padding: 10px 0px;
+  padding: 10px 0;
 }
 
 .feedback-form__button-container {
   padding: 0 20px 22px 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .feedback-form__button {

@@ -5,6 +5,12 @@
   @include mixins.list-reset;
   background-color: variables.$background-color-white;
   color: variables.$text-color-main;
+
+  @media (min-width: variables.$tablet-width) {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .features__item {

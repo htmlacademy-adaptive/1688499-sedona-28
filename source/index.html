@@ -9,11 +9,12 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <div class="page__container">
+    <header class="main-header">
     <a href="" class="main-header__logo">
       <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--opened">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -34,8 +35,8 @@
         </ul>
       </div>
     </nav>
-  </header>
-  <main class="main-container">
+    </header>
+    <main class="main-container">
     <section class="hero">
       <div class="hero__wrapper hero__wrapper--index">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
@@ -71,11 +72,11 @@
           </ul>
         </li>
         <li class="advantages__item advantages__item--blue">
-          <div class="advantages__description">
+          <div class="advantages__description advantages__description--reverse">
             <h3 class="advantages__title advantages__title--blue">Там есть Мост дьявола</h3>
             <p class="advantages__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <img class="advantages__image" src="img/advantages-bridge-mobile.jpg" alt="Горный пейзаж рядом с Седоной" width="520" height="260">
+          <img class="advantages__image advantages__image--reverse" src="img/advantages-bridge-mobile.jpg" alt="Горный пейзаж рядом с Седоной" width="320" height="260">
         </li>
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title">Небольшая площадь</h3>
@@ -101,8 +102,8 @@
       <h2 class="visually-hidden">Карта Седоны</h2>
       <img class="map__image" src="img/map-mobile.jpg" alt="Карта Седоны" width="320" height="350">
     </section>
-  </main>
-  <footer class="main-footer">
+    </main>
+    <footer class="main-footer">
     <div class="main-footer__wrapper">
       <h2 class="visually-hidden">Контакты</h2>
       <a href="#" class="main-footer__link">#visitSEDONA</a>
@@ -136,7 +137,8 @@
         </a>
       </div>
     </div>
-  </footer>
+    </footer>
+</div>
 </body>
 
 </html>

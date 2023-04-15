@@ -1,6 +1,11 @@
 @use "global/variables.scss";
 @use "global/mixins.scss";
 
+.video {
+  display: grid;
+  justify-items: center;
+}
+
 .video__description {
   padding: 17px 26px 38px 28px;
   text-align: center;
@@ -24,7 +29,7 @@
 
 .video__button {
   background-image: url(../img/video-play.svg);
-  display: block;
+  display: none;
   width: 48px;
   height: 54px;
   background-color: transparent;

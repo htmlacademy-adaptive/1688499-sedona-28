@@ -2,13 +2,25 @@
 @use "global/mixins.scss";
 
 .main-nav {
-  width: 100%;
-  background-color: variables.$background-color-white;
+  position: relative;
+  min-height: 56px;
 }
 
 .main-nav__list {
   @include mixins.list-reset;
-  display: none;
+  @include mixins.texts (700, 18px, 26px, uppercase);
+  color: variables.$text-color-second;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.texts (700, 14px, 21px, uppercase);
+    color: variables.$text-color-main;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  /*пока не добавлен js*/
+  @media (max-width: variables.$mobile-only) {
+    display: none;
+  }
 }
 
 .main-nav__item {
@@ -17,30 +29,40 @@
   width: 100%;
   height: 56px;
   padding: 20px 17px 20px 12px;
+
+  @media (min-width: variables.$tablet-width) {
+    background-color: transparent;
+
+    &:nth-child(3) {
+      grid-column: 4 / 5;
+    }
+  }
 }
 
 .main-nav__link {
-  @include mixins.texts (700, 18px, 26px, uppercase);
-  color: variables.$text-color-second;
+  color: inherit;
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
   width: 23px;
   height: 22px;
-  border:none;
-  background-color: variables.$background-color-white;
-  position: relative;
-  top: 17px;
-  left: 280px;
+  background-color: transparent;
+  border: none;
 
-  &::after {
-    content: " ";
-    width: 23px;
-    height: 4px;
-    background-color: variables.$background-color-blue;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    box-shadow: 0 8px 0 0 variables.$background-color-blue, 0 16px 0 0 variables.$background-color-blue;
+  @media (max-width: variables.$mobile-only) {
+    &::after {
+      content: " ";
+      width: 23px;
+      height: 4px;
+      background-color: variables.$background-color-blue;
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-shadow: 0 8px 0 0 variables.$background-color-blue, 0 16px 0 0 variables.$background-color-blue;
+    }
   }
 }
+
