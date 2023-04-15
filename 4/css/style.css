@@ -46,30 +46,35 @@ img {
 
 /*Colors*/
 /*Viewports*/
-.page {
-  min-height: 100%;
-}
-@media (min-width: 1200px) {
-  .page {
-    background-color: #f2f2f2;
-    padding: 0 40px;
-  }
-}
-
 .page__body {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   text-transform: uppercase;
-  margin: 0 auto;
-  min-width: 320px;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #333333;
   background-color: #ffffff;
   overflow-x: hidden;
+  margin: 0 auto;
 }
 @media (min-width: 1200px) {
   .page__body {
+    max-width: 1200px;
+  }
+}
+
+.page__container {
+  min-width: 320px;
+  min-height: 100%;
+}
+@media (min-width: 768px) {
+  .page__container {
+    min-width: 768px;
+  }
+}
+@media (min-width: 1200px) {
+  .page__container {
+    max-width: 1200px;
     box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }
 }
