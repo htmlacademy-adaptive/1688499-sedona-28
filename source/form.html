@@ -14,7 +14,7 @@
     <a href="index.html" class="main-header__logo">
       <img class="main-header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип Седоны">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -41,8 +41,8 @@
       <div class="hero__wrapper">
         <img class="hero__image" src="img/hero-text-inner.svg" alt="Sedona" width="229" height="39">
       </div>
-      <div class="hero__description hero__description--form hero-description">
-        <h1 class="hero-description__title">Оставьте свой отзыв</h1>
+      <div class="hero__description hero__description--form hero-description hero-description--form">
+        <h1 class="hero-description__title hero-description__title--form">Оставьте свой отзыв</h1>
         <p class="hero-description__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях.</p>
       </div>
     </section>
@@ -65,32 +65,32 @@
       </fieldset>
       <fieldset class="feedback-form__field-group">
         <legend class="feedback-form__legend">Контактная информация:</legend>
-        <p class="feedback-form__wrapper">
-          <label class="feedback-form__label" for="phone">Контактный телефон*:</label>
+        <p class="feedback-form__wrapper feedback-form_wrapper--icon-phone">
+          <label class="feedback-form__label feedback-form__label-text" for="phone">Контактный телефон*:</label>
           <input class="feedback-form__input feedback-form__input--icon-phone" id="phone" type="tel" name="userphone" placeholder="Введите телефон" required>
         </p>
-        <p class="feedback-form__wrapper">
-          <label class="feedback-form__label" for="email">Электронная почта*:</label>
+        <p class="feedback-form__wrapper feedback-form_wrapper--icon-email">
+          <label class="feedback-form__label feedback-form__label-text" for="email">Электронная почта*:</label>
           <input class="feedback-form__input feedback-form__input--icon-email" id="email" type="email" name="useremail" placeholder="Введите e-mail" required>
         </p>
       </fieldset>
       <fieldset class="feedback-form__field-group">
         <legend class="feedback-form__legend">Ваше общее впечатление:</legend>
-        <ul class="feedback-form__list">
+        <ul class="feedback-form__list feedback-form__list--radio ">
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__radio visually-hidden" type="radio" id="positive-review" name="review" value="positive" checked>
               <label class="feedback-form__control feedback-form__control--radio" for="positive-review">Скорее положительное</label>
             </p>
           </li>
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__radio visually-hidden" type="radio" id="negative-review" name="review" value="negative">
               <label class="feedback-form__control feedback-form__control--radio" for="negative-review">Скорее отрицательное</label>
             </p>
           </li>
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__radio visually-hidden" type="radio" id="unknown-review" name="review" value="unknown">
               <label class="feedback-form__control feedback-form__control--radio" for="unknown-review">Затрудняюсь ответить</label>
             </p>
@@ -98,28 +98,28 @@
         </ul>
       </fieldset>
       <fieldset class="feedback-form__field-group">
-        <legend class="feedback-form__legend">Посещенные достопримечательности:</legend>
-        <ul class="feedback-form__list">
+        <legend class="feedback-form__legend">Посещенные<br> достопримечательности:</legend>
+        <ul class="feedback-form__list feedback-form__list--checkbox">
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__checkbox visually-hidden" type="checkbox" id="bridge" name="attraction" value="devils-bridge" checked>
               <label class="feedback-form__control feedback-form__control--checkbox" for="bridge">Мост Дьявола</label>
             </p>
           </li>
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__checkbox visually-hidden" type="checkbox" id="mountain" name="attraction" value="bell-mountain" checked>
               <label class="feedback-form__control feedback-form__control--checkbox" for="mountain">Гора-Колокол</label>
             </p>
           </li>
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__checkbox visually-hidden" type="checkbox" id="park" name="attraction" value="slide-park" checked>
               <label class="feedback-form__control feedback-form__control--checkbox" for="park">Слайд-парк</label>
             </p>
           </li>
           <li class="feedback-form__item">
-            <p class="feedback-form__wrapper">
+            <p class="feedback-form__wrapper feedback-form__wrapper--list">
               <input class="feedback-form__checkbox visually-hidden" type="checkbox" id="rocks" name="attraction" value="red-rocks">
               <label class="feedback-form__control feedback-form__control--checkbox" for="rocks">Красные скалы</label>
             </p>
@@ -147,17 +147,17 @@
         <h2 class="visually-hidden">Наши социальные сети</h2>
         <ul class="social__list">
           <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy" target="_blank">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы Вконтакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://t.me/htmlacademy" target="_blank">
+            <a class="social__link social__link--tg" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы в Telegram</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <span class="visually-hidden">Мы в YouTube</span>
             </a>
           </li>
@@ -175,6 +175,7 @@
     </div>
   </footer>
 </div>
+
   <div class="modal modal--error">
     <div class="modal__wrapper modal__wrapper--error">
       <h2 class="modal__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
@@ -191,6 +192,8 @@
       <button class="modal__button modal__button--success button">Закрыть окно</button>
     </div>
   </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 

@@ -14,3 +14,31 @@
   height: 48px;
   background-color: variables.$background-color-blue;
 }
+
+.social__link {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 24px;
+    height: 24px;
+    left: 50%;
+    top: 50%;
+    transform: translate(50%, 50%);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
+.social__link--vk::before {
+  background-image: url("../img/vk.svg");
+}
+
+.social__link--tg::before {
+  background-image: url("../img/telegram.svg");
+}
+
+.social__link--youtube::before {
+  background-image: url("../img/youtube.svg");
+}

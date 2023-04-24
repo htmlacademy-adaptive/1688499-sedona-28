@@ -2,21 +2,97 @@
 @use "global/mixins.scss";
 
 .feedback-form {
+  padding: 0 20px;
+
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    //column-gap: 35px;
+    padding: 0 60px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 120px;
   }
 }
 
 .feedback-form__field-group {
-  padding: 20px 20px 39px 24px;
   border: none;
   margin: 0;
+  margin-top: 24px;
+  position: relative;
+
+  &:nth-child(1) {
+    padding: 24px 0 39px;
+  }
+
+  &:nth-child(2) {
+    padding: 18px 0 34px;
+  }
+
+  &:nth-child(3) {
+    padding: 19px 0 24px;
+  }
+
+  &:nth-child(4) {
+    padding: 19px 0 24px;
+    margin-top: 11px;
+  }
+
+  &:nth-child(5) {
+    padding: 20px 0 0;
+    margin-top: 10px;
+  }
 
   @media (min-width: variables.$tablet-width) {
+    //margin-top: 6px;
+    margin-top: 0;
+
     &:nth-child(n + 3) {
       grid-column: 1 / -1;
+      border-top: 1px solid variables.$border-light-grey;
     }
+
+    &:nth-child(1) {
+      padding: 30px 30px 0 0;
+      margin-bottom: 71px;
+      border-right: 1px solid variables.$border-grey;
+    }
+
+    &:nth-child(2) {
+      padding: 27px 0 43px 30px;
+    }
+
+    &:nth-child(3) {
+      padding: 0;
+    }
+
+    &:nth-child(5) {
+      padding-top: 41px;
+      margin-top: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &:nth-child(1) {
+      padding: 26px 50px 0 0;
+      margin-bottom: 82px;
+      border-right: 1px solid variables.$border-grey;
+    }
+
+    &:nth-child(2) {
+      padding: 27px 0 43px 50px;
+    }
+  }
+}
+
+.feedback-form__field-group:nth-child(n+3)>.feedback-form__legend {
+  @media (min-width: variables.$tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%,-50%);
   }
 }
 
@@ -24,24 +100,62 @@
   @include mixins.texts (700, 18px, 26px);
   color: variables.$title-color-black;
   text-align: center;
-  padding: 20px 0 20px;
-  border-top: 1px solid variables.$border-light-grey;
+  background-color: variables.$background-color-white;
+  //padding: 24px 0 0;
+  //border-top: 1px solid variables.$border-light-grey;
   width: 100%;
+  //margin-top: 24px;
+  //margin-bottom: 20px;
+  margin: 0;
+  position: relative;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.texts (700, 21px, 26px);
+  }
+}
+
+.feedback-form__legend::before {
+  @media (max-width: variables.$mobile-only) {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: variables.$border-form-grey;
+  }
+}
+
+.feedback-form__legend br {
+  display: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
+}
+
+.feedback-form__label-text {
+  padding-left: 16px;
 }
 
 .feedback-form__wrapper {
-  margin: 0 0 16px 0;
+  margin: 0 0 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .feedback-form__input {
   @include mixins.texts (700, 18px, 26px, none);
   font-family: inherit;
   background-color: variables.$background-input;
-  height: 58px;
-  width: 280px;
-  border: none;
+  //height: 58px;
+  width: 100%;
   padding: 16px;
+  border: none;
   outline: none;
+  overflow: hidden;
 
   &::placeholder {
     color: variables.$text-placeholder;
@@ -50,37 +164,183 @@
 
   &--textarea {
     display: block;
-    width: 279px;
+    min-width: 279px;
     height: 150px;
     margin-bottom: 56px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &--textarea {
+      height: 160px;
+      margin-bottom: 50px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &--textarea {
+      width: 768px;
+      margin: 0 auto;
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.feedback-form_wrapper--icon-phone {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: variables.$border-form-grey;
+    right: 0;
+    background-image: url("../img/icon-phone.svg");
+  }
+}
+
+.feedback-form_wrapper--icon-email {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 58px;
+    height: 58px;
+    background-color: variables.$border-form-grey;
+    right: 0;
+    background-image: url("../img/icon-mail.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
 .feedback-form__list {
   @include mixins.list-reset;
+  min-height: 46px;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--radio {
+      //padding: 30px 15px 20px 37px;
+      padding: 42px 15px 47px 37px;
+    }
+
+    &--checkbox {
+      padding: 37px 47px 13px 83px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &--radio {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 28px;
+      padding: 60px 0 70px 52px;
+    }
+
+    &--checkbox {
+      grid-template-columns: repeat(4, auto);
+      grid-gap: 64px;
+      padding: 67px 47px 62px 43px;
+    }
+  }
+}
+
+.feedback-form__item {
+  margin-bottom: 16px;
+  min-height: 46px;
+}
+
+.feedback-form__wrapper--list {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding-left: 60px;
 }
 
 .feedback-form__control {
   @include mixins.texts (700, 18px, 26px, none);
   color: variables.$title-color-black;
+  position: relative;
   padding: 10px 0;
 }
 
+.feedback-form__control--radio::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: variables.$background-input;
+}
+
+.feedback-form__radio:checked + .feedback-form__control--radio::after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: -45px;
+  width: 16px;
+  height: 16px;
+  background-color: variables.$text-color-main;
+  border-radius: 50%;
+}
+
+.feedback-form__control--checkbox::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  width: 46px;
+  height: 46px;
+  background-color: variables.$background-input;
+}
+
+.feedback-form__checkbox:checked + .feedback-form__control--checkbox::after {
+  content: "";
+  position: absolute;
+  top: 13px;
+  left: -49px;
+  width: 22px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+}
+
 .feedback-form__button-container {
-  padding: 0 20px 22px 20px;
+  padding: 0 0 10px;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 768px;
+    margin: 0 auto;
   }
 }
 
 .feedback-form__button {
-  width: 280px;
+  width: 100%;
   padding: 16px 0;
   margin-bottom: 3px;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 324px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 384px;
+  }
 }
 
 .feedback-form__footnote {
@@ -88,4 +348,8 @@
   color: variables.$text-footnote;
   text-align: right;
   margin: 0;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.texts (400, 14px, 21px);
+  }
 }

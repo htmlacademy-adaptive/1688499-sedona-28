@@ -3,6 +3,7 @@
 
 .features {
   @include mixins.list-reset;
+  padding: 25px 18px 46px 65px;
   background-color: variables.$background-color-white;
   color: variables.$text-color-main;
 
@@ -10,11 +11,133 @@
     grid-column: 1 / -1;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    padding: 0;
   }
 }
 
 .features__item {
-  padding: 23px 18px 25px 65px;
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 256px;
+    margin: 0;
+    padding: 60px 33px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 400px;
+    padding: 69px 55px;
+  }
+}
+
+.features__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 38px;
+    background-color: transparent;
+    top: 0;
+    left: -47px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    width: 190px;
+
+    &::before {
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 300px;
+  }
+
+  &--house::before {
+    background-image: url(../img/icon-house.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 98px;
+
+    &--house::before {
+      width: 77px;
+      height: 72px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 100px;
+
+    &::before {
+      width: 79px;
+      height: 72px;
+    }
+  }
+
+  &--food::before {
+    background-image: url(../img/icon-food.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 94px;
+
+    &--food::before {
+      width: 80px;
+      height: 68px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      width: 73px;
+      height: 68px;
+    }
+  }
+
+  &--gift::before {
+    background-image: url(../img/icon-gift.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 89px;
+
+    &--gift::before {
+      width: 66px;
+      height: 75px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding-top: 101px;
+
+    &::before {
+      width: 77px;
+      height: 75px;
+    }
+  }
 }
 
 .features__title {
@@ -22,12 +145,22 @@
   text-align: left;
   color: variables.$title-color-black;
   margin: 0;
-  margin-bottom: 16px;
+  padding-top: 8px;
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.texts (700, 21px, 26px);
+    padding-top: 0;
+    text-align: center;
+  }
 }
 
 .features__text {
   margin: 0;
   text-align: left;
+  padding-top: 16px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-top: 23px;
+    text-align: center;
+  }
 }
-
-

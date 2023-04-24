@@ -1,17 +1,95 @@
 @use "global/variables.scss";
 @use "global/mixins.scss";
 
+.hero-description {
+  display: grid;
+  justify-items: center;
+  padding: 32px 18px 34px;
+  text-align: center;
+
+  &--form {
+    padding: 36px 20px 28px;
+  }
+
+  &--catalog {
+    padding: 33px 20px 39px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    width: 520px;
+    padding: 47px 0 56px;
+
+    &--form {
+      width: 436px;
+      padding: 64px 0 108px;
+    }
+
+    &--catalog {
+      width: 458px;
+      padding: 66px 0 76px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 59px 0 44px;
+
+    &--form {
+      padding: 115px 0 68px;
+    }
+
+    &--catalog {
+      padding: 100px 0 65px;
+    }
+  }
+}
+
 .hero-description__title {
   @include mixins.texts (700, 18px, 26px);
-  margin: 0;
-  margin-bottom: 35px;
+  width: 270px;
+  margin: 0 0 35px;
   color: variables.$title-color-black;
-  text-align: center;
+
+  &--catalog {
+    margin: 0 0 25px;
+  }
+
+  &--form {
+    margin: 0 0 24px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    @include mixins.texts (700, 21px, 26px);
+    width: 100%;
+    margin: 0 0 32px;
+
+    &--form {
+      @include mixins.texts (700, 30px, 26px);
+      margin: 0 0 20px;
+    }
+
+    &--catalog {
+      @include mixins.texts (700, 30px, 26px);
+      margin: 0 0 35px;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &--form {
+      margin: 0 0 32px;
+    }
+  }
 }
 
 .hero-description__text {
   @include mixins.texts (400, 14px, 21px);
   margin: 0;
   color: variables.$text-color-main;
-  text-align: center;
+}
+
+.hero-description__brake {
+  display: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: inline;
+  }
 }
