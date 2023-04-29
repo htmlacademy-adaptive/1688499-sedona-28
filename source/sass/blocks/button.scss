@@ -7,4 +7,20 @@
   background-color: variables.$background-color-blue;
   color: variables.$text-color-second;
   border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: variables.$background-hover;
+  }
+
+  &:active,
+  &:focus {
+    background-color: variables.$background-active;
+    color: transparentize(variables.$background-color-white, 0.7);
+  }
+
+  &:disabled {
+    background-color: variables.$background-input-hover;
+    cursor: default;
+  }
 }

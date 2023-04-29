@@ -38,12 +38,12 @@
     counter-increment: section;
     white-space: pre;
     content: "— №" counter(section) "—\A";
-    margin-bottom: 20px;
+    margin-bottom: 22px;
   }
 }
 
 .advantages__description {
-  padding: 54px 18px 44px;
+  padding: 54px 18px 46px;
 
   &--reverse {
     padding-top: 37px;
@@ -91,7 +91,7 @@
 
 .advantages__item--grey {
   background-color: variables.$background-color-grey;
-  padding: 24px 26px;
+  padding: 27px 24px 21px 26px;
   position: relative;
 
   @media (max-width: variables.$mobile-only) {
@@ -108,18 +108,10 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 41px 33px 63px;
+    padding: 41px 33px 48px;
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 52px 50px 52px;
-  }
-}
-
-.advantages__item br {
-  display: none;
-
-  @media (min-width: variables.$tablet-width) {
-    display: inline;
   }
 }

@@ -27,6 +27,7 @@
 
   @media (min-width: variables.$tablet-width) {
     @include mixins.texts (700, 30px, 30px);
+    margin-bottom: 27px;
   }
 }
 
@@ -36,15 +37,7 @@
   margin-top: 0;
 
   @media (min-width: variables.$tablet-width) {
-    margin-bottom: 44px;
-  }
-}
-
-.hotel-search__text br {
-  display: none;
-
-  @media (min-width: variables.$tablet-width) {
-    display: inline;
+    margin-bottom: 45px;
   }
 }
 

@@ -12,13 +12,17 @@
 }
 
 .video__description {
-  padding: 17px 26px 38px 28px;
+  padding: 6px 26px 38px 28px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     width: 445px;
     padding: 51px 0 85px;
     margin: 0 auto;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 60px 0 85px;
   }
 }
 

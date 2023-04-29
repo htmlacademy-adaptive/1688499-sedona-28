@@ -17,7 +17,7 @@
 
   @media (min-width: variables.$tablet-width) {
     width: 520px;
-    padding: 47px 0 56px;
+    padding: 47px 0 54px;
 
     &--form {
       width: 436px;
@@ -38,7 +38,7 @@
     }
 
     &--catalog {
-      padding: 100px 0 65px;
+      padding: 103px 0 81px;
     }
   }
 }
@@ -84,12 +84,4 @@
   @include mixins.texts (400, 14px, 21px);
   margin: 0;
   color: variables.$text-color-main;
-}
-
-.hero-description__brake {
-  display: none;
-
-  @media (min-width: variables.$tablet-width) {
-    display: inline;
-  }
 }

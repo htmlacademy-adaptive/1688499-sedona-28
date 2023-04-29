@@ -11,6 +11,7 @@
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
     justify-content: space-around;
+    //padding-top: 30px;
   }
 }
 
@@ -25,4 +26,13 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+
+  &:hover {
+    color: variables.$title-color-hover;
+  }
+
+  &:active,
+  &:focus {
+    color: variables.$copyright-color-active;
+  }
 }

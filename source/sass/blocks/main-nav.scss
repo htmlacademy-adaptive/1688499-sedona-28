@@ -15,6 +15,20 @@
     &--opened .main-nav__list {
       display: block;
     }
+
+    &--nojs {
+      z-index: none;
+      padding-top: 100px;
+    }
+
+    &--nojs .main-nav__toggle {
+      display: none;
+    }
+
+    &--nojs .main-nav__wrapper {
+      position: static;
+      display: block;
+    }
   }
 }
 
@@ -50,17 +64,17 @@
   height: 56px;
   padding: 17px 0 13px;
 
-  &:hover {
-    background-color: variables.$background-hover;
-  }
-
-  &:active,
-  &:focus {
-    background-color: variables.$background-active;
-    color: variables.$text-color-active;
-  }
-
   @media (max-width: variables.$mobile-only) {
+    &:hover {
+      background-color: variables.$background-hover;
+    }
+
+    &:active,
+    &:focus {
+      background-color: variables.$background-active;
+      color: transparentize(variables.$background-color-white, 0.7);
+    }
+
     &:not(:first-child) {
       border-top: 1px solid #9ac2db;
     }
@@ -75,6 +89,15 @@
 
     &:nth-child(3) {
       grid-column: 4 / 5;
+    }
+
+    &:hover {
+      color: variables.$background-color-blue;
+    }
+
+    &:active,
+    &:focus {
+      color: transparentize(variables.$title-color-black, 0.7);
     }
   }
 }
@@ -110,17 +133,17 @@
       position: absolute;
       top: 0;
       left: 0;
-      box-shadow: 0 8px 0 0 variables.$background-color-blue, 0 16px 0 0 variables.$background-color-blue;
+      box-shadow: 0 9px 0 0 variables.$background-color-blue, 0 18px 0 0 variables.$background-color-blue;
     }
 
     &:hover::after {
       background-color: variables.$menu-hover-blue;
-      box-shadow: 0 8px 0 0 variables.$menu-hover-blue, 0 16px 0 0 variables.$menu-hover-blue;
+      box-shadow: 0 9px 0 0 variables.$menu-hover-blue, 0 18px 0 0 variables.$menu-hover-blue;
     }
 
     &:active::after {
       background-color: variables.$menu-active-blue;
-      box-shadow: 0 8px 0 0 variables.$menu-active-blue, 0 16px 0 0 variables.$menu-active-blue;
+      box-shadow: 0 9px 0 0 variables.$menu-active-blue, 0 18px 0 0 variables.$menu-active-blue;
     }
   }
 }
@@ -148,26 +171,15 @@
       box-shadow: none;
     }
 
-    &:hover::before,
-    &:hover::after {
-      background-color: variables.$menu-item-hover;
+    &:hover::after,
+    &:hover::before {
+      background-color: transparentize(variables.$background-color-white, 0.4);
     }
 
-    &:active::before,
-    &:active::after {
-      background-color: variables.$text-color-active;
+    &:active::after,
+    &:active::before {
+      background-color: transparentize(variables.$background-color-white, 0.7);
     }
   }
 }
 
-.main-nav--nojs .main-nav__toggle {
-  display: none;
-}
-
-.main-nav--nojs {
-  position: static;
-}
-
-.main-nav--nojs .main-nav__link {
-  display: block;
-}

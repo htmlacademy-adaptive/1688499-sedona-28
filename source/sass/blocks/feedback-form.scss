@@ -169,6 +169,17 @@
     margin-bottom: 56px;
   }
 
+  &:hover {
+    background-color: variables.$background-input-hover;
+  }
+
+  &:active,
+  &:focus {
+    background-color: variables.$background-color-white;
+    outline: 4px solid variables.$background-input-hover;
+    outline-offset: -4px;
+  }
+
   @media (min-width: variables.$tablet-width) {
     &--textarea {
       height: 160px;
@@ -309,6 +320,20 @@
   height: 16px;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
+}
+
+.feedback-form__control--radio:hover::before,
+.feedback-form__control--checkbox:hover::before {
+  background-color: variables.$background-input-hover;
+}
+
+.feedback-form__control--radio:active::before,
+.feedback-form__control--checkbox:active::before {
+  background-color: variables.$background-input-active;
+}
+
+.feedback-form__radio:checked + .feedback-form__control--radio:active::after {
+  background-color: transparentize(variables.$text-color-main, 0.7);
 }
 
 .feedback-form__button-container {

@@ -1,0 +1,24 @@
+@use "global/variables.scss";
+
+.br-shown {
+  display: none;
+
+  &--mobile {
+    @media (max-width: variables.$mobile-only) {
+      display: block;
+    }
+  }
+
+  &--tablet {
+    @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+      display: block;
+    }
+  }
+
+  &--desktop {
+    @media (min-width: variables.$desktop-width) {
+      display: block;
+    }
+  }
+}
+
