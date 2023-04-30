@@ -6,11 +6,12 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 38px 18px 26px;
+  padding: 43px 18px 26px;
 
   @media (min-width: variables.$tablet-width) {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    //padding-top: 30px;
   }
 }
 
@@ -25,4 +26,13 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
+
+  &:hover {
+    color: variables.$title-color-hover;
+  }
+
+  &:active,
+  &:focus {
+    color: variables.$copyright-color-active;
+  }
 }

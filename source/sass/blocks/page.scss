@@ -5,18 +5,16 @@
   @include mixins.texts (400, 14px, 21px, uppercase);
   font-family: "PT Sans", "Arial", sans-serif;
   color: variables.$text-color-main;
-  background-color: variables.$background-color-white;
+  background-color: variables.$background-input;
   overflow-x: hidden;
-  margin: 0 auto;
-
-  @media (min-width: variables.$desktop-width) {
-    max-width: variables.$desktop-width;
-  }
+  margin: 0;
 }
 
 .page__container {
   min-width: 320px;
   min-height: 100%;
+  margin: 0 auto;
+  background-color: variables.$background-color-white;
 
   @media (min-width: variables.$tablet-width) {
     min-width: variables.$tablet-width;
