@@ -134,6 +134,7 @@
   background-image: url("../img/like-icon.svg");
   background-repeat: no-repeat;
   //background-position: left 10px;
+  cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
     padding: 0 0 0 33px;

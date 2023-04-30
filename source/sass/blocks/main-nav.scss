@@ -6,10 +6,13 @@
   min-height: 56px;
   z-index: 1;
 
-
   @media (max-width: variables.$mobile-only) {
-    &--closed .main-nav__list {
+    &--closed .main-nav__wrapper {
       display: none;
+    }
+
+    &--opened {
+      z-index: 5;
     }
 
     &--opened .main-nav__list {
@@ -17,7 +20,7 @@
     }
 
     &--nojs {
-      z-index: none;
+      z-index: 0;
       padding-top: 100px;
     }
 
@@ -87,7 +90,7 @@
   @media (min-width: variables.$tablet-width) {
     background-color: transparent;
 
-    &:nth-child(3) {
+    &:nth-child(4n+3) {
       grid-column: 4 / 5;
     }
 
@@ -150,7 +153,8 @@
 
 .main-nav--opened .main-nav__toggle {
   @media (max-width: variables.$mobile-only) {
-    z-index: 2;
+    //z-index: 2;
+    z-index: 10;
 
     &::before,
     &::after {
