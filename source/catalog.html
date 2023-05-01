@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона - Фото и видео</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -50,7 +54,13 @@
       <ul class="catalog__list">
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
-            <img class="catalog__item-image catalog__item-image--first" src="img/catalog-photo-1-mobile.jpg" alt="Дорога в закат" width="280" height="280">
+            <picture>
+              <source media="(min-width:1200px)"
+              srcset="img/catalog/catalog-photo-1-desktop.jpg 1x, img/catalog/catalog-photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)"
+              srcset="img/catalog/catalog-photo-1-tablet.jpg 1x, img/catalog/catalog-photo-1-tablet@2x.jpg 2x">
+              <img class="catalog__item-image catalog__item-image--first" src="img/catalog/catalog-photo-1-mobile.jpg" srcet="img/catalog/catalog-photo-1-mobile@2x.jpg 2x" alt="Дорога в закат" width="280" height="280">
+           </picture>
           </a>
           <div class="catalog__item-text catalog__item-text--first">
             <div class="catalog__item-wrapper">
@@ -62,7 +72,13 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
-            <img class="catalog__item-image" src="img/catalog-photo-2-mobile.jpg" alt="Растение на фоне гор" width="280" height="280">
+            <picture>
+              <source media="(min-width:1200px)"
+              srcset="img/catalog/catalog-photo-2-desktop.jpg 1x, img/catalog/catalog-photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)"
+              srcset="img/catalog/catalog-photo-2-tablet.jpg 1x, img/catalog/catalog-photo-2-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="img/catalog/catalog-photo-2-mobile.jpg" srcet="img/catalog/catalog-photo-2-mobile@2x.jpg 2x" alt="Растение на фоне гор" width="280" height="280">
+           </picture>
           </a>
           <div class="catalog__item-text">
             <div class="catalog__item-wrapper">
@@ -74,9 +90,15 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
-            <img class="catalog__item-image" src="img/catalog-photo-3-mobile.jpg" alt="Дорога-серпантин среди леса" width="280" height="280">
+            <picture>
+              <source media="(min-width:1200px)"
+              srcset="img/catalog/catalog-photo-3-desktop.jpg 1x, img/catalog/catalog-photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)"
+              srcset="img/catalog/catalog-photo-3-tablet.jpg 1x, img/catalog/catalog-photo-3-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="img/catalog/catalog-photo-3-mobile.jpg" srcet="img/catalog/catalog-photo-3-mobile@2x.jpg 2x" alt="Дорога-серпантин среди леса" width="280" height="280">
+           </picture>
           </a>
-          <div class="catalog__item-text catalog__item-text--dark">
+          <div class="catalog__item-text">
             <div class="catalog__item-wrapper">
               <h2 class="catalog__item-title">Дорога на север</h2>
               <p class="catalog__item-author">Автор фото: Петр</p>
@@ -86,7 +108,13 @@
         </li>
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
-            <img class="catalog__item-image" src="img/catalog-photo-4-mobile.jpg" alt="Гороный пейзаж" width="280" height="280">
+            <picture>
+              <source media="(min-width:1200px)"
+              srcset="img/catalog/catalog-photo-4-desktop.jpg 1x, img/catalog/catalog-photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)"
+              srcset="img/catalog/catalog-photo-4-tablet.jpg 1x, img/catalog/catalog-photo-4-tablet@2x.jpg 2x">
+              <img class="catalog__item-image" src="img/catalog/catalog-photo-4-mobile.jpg" srcet="img/catalog/catalog-photo-4-mobile@2x.jpg 2x" alt="Гороный пейзаж" width="280" height="280">
+           </picture>
           </a>
           <div class="catalog__item-text">
             <div class="catalog__item-wrapper">
@@ -104,7 +132,13 @@
         <p class="video__description-text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
       </div>
       <div class="video__wrapper">
-      <img class="video__video" src="img/video-mobile.jpg" alt="Заставка видео о Седоне" width="320" height="177">
+        <picture>
+          <source media="(min-width:1200px)"
+          srcset="img/video/video-desktop.jpg 1x, img/video/video-desktop@2x.jpg 2x">
+          <source media="(min-width:768px)"
+          srcset="img/video/video-tablet.jpg 1x, img/video/video-tablet@2x.jpg 2x">
+          <img class="video__video" src="img/video/video-mobile.jpg" srcet="imgimg/video/video-mobile@2x.jpg 2x" alt="Заставка видео о Седоне" width="320" height="177">
+       </picture>
       <button class="video__button"><span class="visually-hidden">Play</span></button>
       </div>
     </section>

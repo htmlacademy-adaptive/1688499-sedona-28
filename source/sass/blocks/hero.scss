@@ -1,7 +1,7 @@
 @use "global/variables.scss";
 
 .hero__wrapper {
-  background-image: url("../img/hero-bg-mobile.jpg");
+  background-image: url("../img/hero/hero-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;
@@ -26,11 +26,20 @@
     height: 389px;
   }
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero/hero-bg-mobile@2x.jpg");
+  }
+
   @media (min-width: variables.$tablet-width) {
     height: 290px;
+    background-image: url("../img/hero/hero-bg-desktop.jpg");
 
     &--index {
       height: 518px;
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/hero-bg-desktop@2x.jpg");
     }
   }
 

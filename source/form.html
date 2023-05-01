@@ -6,6 +6,10 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона - Форма отзыва</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -98,7 +102,7 @@
         </ul>
       </fieldset>
       <fieldset class="feedback-form__field-group">
-        <legend class="feedback-form__legend">Посещенные<br> достопримечательности:</legend>
+        <legend class="feedback-form__legend">Посещенные<br class="br-shown br-shown--tablet"> достопримечательности:</legend>
         <ul class="feedback-form__list feedback-form__list--checkbox">
           <li class="feedback-form__item">
             <p class="feedback-form__wrapper feedback-form__wrapper--list">
@@ -180,16 +184,19 @@
     <div class="modal__wrapper modal__wrapper--error">
       <h2 class="modal__title">ЧТО-ТО ПОШЛО НЕ ТАК!</h2>
       <p class="modal__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="modal__button modal__button--error button">Ок</button>
     </div>
-    <button class="modal__button modal__button--error button">Ок</button>
   </div>
+
   <div class="modal modal--success">
     <div class="modal__wrapper modal__wrapper--success">
+      <div class="modal__description">
       <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам.В ближайшее время мы опубликуем его на сайте.</p>
-    </div>
-    <div class="modal__button-wrapper">
+      <p class="modal__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+      </div>
+      <div class="modal__button-wrapper">
       <button class="modal__button modal__button--success button">Закрыть окно</button>
+      </div>
     </div>
   </div>
 

@@ -38,7 +38,13 @@
     counter-increment: section;
     white-space: pre;
     content: "— №" counter(section) "—\A";
-    margin-bottom: 22px;
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    &::before {
+      margin-bottom: 26px;
+    }
   }
 }
 
@@ -68,7 +74,9 @@
 .advantages__image {
   width: 100%;
   height: 256px;
+}
 
+.advantages__image-wrapper {
   @media (min-width: variables.$tablet-width) {
     grid-column: 2 / 4;
 
