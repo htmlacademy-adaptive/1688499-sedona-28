@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
 </head>
 
 <body class="page__body">
@@ -55,7 +60,15 @@
             <h3 class="advantages__title advantages__title--blue">НАСТОЯЩИЙ<br class="br-shown br-shown--desktop"> ГОРОДОК</h3>
             <p class="advantages__text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ,<br class="br-shown br-shown--desktop"> ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
           </div>
-          <img class="advantages__image" src="img/advantages-city-mobile.jpg" alt="Кафе в Седоне" width="320" height="260">
+          <div class="advantages__image-wrapper">
+            <picture>
+              <source media="(min-width:1200px)"
+              srcset="img/advantages/advantages-city-desktop.jpg 1x, img/advantages/advantages-city-desktop@2x.jpg 2x">
+              <source media="(min-width:768px)"
+              srcset="img/advantages/advantages-city-tablet.jpg 1x, img/advantages/advantages-city-tablet@2x.jpg 2x">
+              <img class="advantages__image" src="img/advantages/advantages-city-mobile.jpg" srcet="img/advantages/advantages-city-mobile@2x.jpg 2x" alt="Кафе в Седоне" width="320" height="260">
+            </picture>
+          </div>
           <ul class="features">
             <li class="features__item">
               <div class="features__wrapper features__wrapper--house">
@@ -82,7 +95,15 @@
             <h3 class="advantages__title advantages__title--blue">Там есть<br class="br-shown br-shown--tablet"> Мост дьявола</h3>
             <p class="advantages__text">Да, по нему можно пройти!<br class="br-shown br-shown--desktop"> Если вы осмелитесь, конечно</p>
           </div>
-          <img class="advantages__image advantages__image--reverse" src="img/advantages-bridge-mobile.jpg" alt="Горный пейзаж рядом с Седоной" width="320" height="260">
+          <div class="advantages__image-wrapper advantages__image-wrapper--reverse">
+            <picture>
+               <source media="(min-width:1200px)"
+               srcset="img/advantages/advantages-bridge-desktop.jpg 1x, img/advantages/advantages-bridge-desktop@2x.jpg 2x">
+               <source media="(min-width:768px)"
+               srcset="img/advantages/advantages-bridge-tablet.jpg 1x, img/advantages/advantages-bridge-tablet@2x.jpg 2x">
+               <img class="advantages__image advantages__image--reverse" src="img/advantages/advantages-bridge-mobile.jpg" srcet="img/advantages/advantages-bridge-mobile@2x.jpg 2x" alt="Горный пейзаж рядом с Седоной" width="320" height="260">
+            </picture>
+            </div>
         </li>
         <li class="advantages__item advantages__item--grey">
           <h3 class="advantages__title">Небольшая<br class="br-shown br-shown--desktop"> площадь</h3>
