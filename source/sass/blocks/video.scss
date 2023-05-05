@@ -3,7 +3,7 @@
 
 .video {
   @media (min-width: variables.$tablet-width) {
-    padding-bottom: 40px;
+    padding-bottom: 46px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -12,12 +12,12 @@
 }
 
 .video__description {
-  padding: 15px 26px 38px 28px;
+  padding: 17px 26px 38px 28px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     width: 445px;
-    padding: 51px 0 85px;
+    padding: 57px 0 91px;
     margin: 0 auto;
   }
 

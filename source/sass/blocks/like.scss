@@ -1,0 +1,21 @@
+@use "global/variables.scss";
+@use "global/mixins.scss";
+
+.like__icon {
+  align-self: flex-start;
+  opacity: 0.3;
+
+  @media (min-width: variables.$desktop-width) {
+    opacity: 1;
+    color: variables.$background-color-white;
+  }
+}
+
+.like__number {
+  @include mixins.texts (700, 14px, 21px);
+  padding: 0 0 0 14px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 0 0 7px;
+  }
+}

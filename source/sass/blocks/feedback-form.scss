@@ -328,24 +328,29 @@
   background-color: transparentize(variables.$text-color-main, 0.7);
 }
 
-.feedback-form__input:focus + .feedback-form__control--radio::after {
+.feedback-form__radio:focus + .feedback-form__control::before {
+  background-color: variables.$background-input-active;
+}
+
+.feedback-form__checkbox:focus + .feedback-form__control::before {
   background-color: variables.$background-input-active;
 }
 
 .feedback-form__button-container {
-  padding: 0 0 10px;
+  padding: 0 0 23px;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 56px;
+    padding-bottom: 67px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 768px;
     margin: 0 auto;
+    padding-bottom: 62px;
   }
 }
 
