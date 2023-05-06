@@ -3,7 +3,7 @@
 
 .video {
   @media (min-width: variables.$tablet-width) {
-    padding-bottom: 46px;
+    padding-bottom: 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -30,10 +30,11 @@
   @include mixins.texts (700, 18px, 26px);
   color: variables.$title-color-black;
   margin: 0;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 
   @media (min-width: variables.$tablet-width) {
     @include mixins.texts (700, 30px, 26px);
+    padding-bottom: 33px;
   }
 }
 

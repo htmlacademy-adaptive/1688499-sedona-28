@@ -4,9 +4,11 @@
 .social__list {
   @include mixins.list-reset;
   min-width: 154px;
+  max-width: 540px;
   display: flex;
   justify-content: space-between;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 .social__item {
