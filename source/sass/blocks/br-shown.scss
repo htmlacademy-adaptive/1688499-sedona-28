@@ -10,7 +10,7 @@
   }
 
   &--tablet {
-    @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width) {
+    @media (min-width: variables.$tablet-width) {
       display: block;
     }
   }
@@ -21,4 +21,3 @@
     }
   }
 }
-

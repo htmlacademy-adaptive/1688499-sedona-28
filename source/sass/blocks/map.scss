@@ -1,7 +1,75 @@
 @use "global/variables.scss";
 @use "global/mixins.scss";
 
-.map iframe {
+.map {
+  position: relative;
+  height: 350px;
+  margin-bottom: 9px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 27px;
+    height: 27px;
+    background-color: variables.$background-color-white;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: variables.$background-color-blue;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 50%;
+    z-index: 6;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.map__container {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: none;
+  z-index: 15;
+
+  margin-bottom: 9px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.map__image {
+  position: absolute;
+  width: 100%;
+  height: 350px;
+  top: 0;
+  display: block;
+}
+
+
+/*.map iframe {
   display: block;
   width: 100%;
   height: 350px;
@@ -26,6 +94,11 @@
 
 .map {
   position: relative;
+  margin-bottom: 9px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 7px;
+  }
 
   &::before {
     position: absolute;
@@ -54,4 +127,4 @@
     margin: 0 auto;
     border-radius: 50%;
   }
-}
+}*/

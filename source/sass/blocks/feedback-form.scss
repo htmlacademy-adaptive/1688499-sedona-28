@@ -23,11 +23,11 @@
   position: relative;
 
   &:nth-child(1) {
-    padding: 24px 0 39px;
+    padding: 24px 0 37px;
   }
 
   &:nth-child(2) {
-    padding: 18px 0 34px;
+    padding: 18px 0 37px;
   }
 
   &:nth-child(3) {
@@ -76,7 +76,7 @@
   @media (min-width: variables.$desktop-width) {
     &:nth-child(1) {
       padding: 26px 50px 0 0;
-      margin-bottom: 82px;
+      margin-bottom: 84px;
       border-right: 1px solid variables.$border-grey;
     }
 
@@ -119,8 +119,8 @@
     content: "";
     position: absolute;
     top: -25px;
-    left: 0;
-    width: 100%;
+    left: -20px;
+    width: 100vw;
     height: 1px;
     background-color: variables.$border-form-grey;
   }
@@ -183,7 +183,7 @@
     &--textarea {
       width: 768px;
       margin: 0 auto;
-      margin-bottom: 48px;
+      margin-bottom: 45px;
     }
   }
 }
@@ -239,14 +239,14 @@
   @media (min-width: variables.$desktop-width) {
     &--radio {
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 28px;
-      padding: 60px 0 70px 52px;
+      grid-gap: 22px;
+      padding: 60px 0 70px 55px;
     }
 
     &--checkbox {
       grid-template-columns: repeat(4, auto);
       grid-gap: 64px;
-      padding: 67px 47px 62px 43px;
+      padding: 67px 43px 62px 46px;
     }
   }
 }
@@ -328,24 +328,29 @@
   background-color: transparentize(variables.$text-color-main, 0.7);
 }
 
-.feedback-form__input:focus + .feedback-form__control--radio::after {
+.feedback-form__radio:focus + .feedback-form__control::before {
+  background-color: variables.$background-input-active;
+}
+
+.feedback-form__checkbox:focus + .feedback-form__control::before {
   background-color: variables.$background-input-active;
 }
 
 .feedback-form__button-container {
-  padding: 0 0 10px;
+  padding: 0 0 23px;
 
   @media (min-width: variables.$tablet-width) {
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 56px;
+    padding-bottom: 64px;
   }
 
   @media (min-width: variables.$desktop-width) {
     width: 768px;
     margin: 0 auto;
+    padding-bottom: 62px;
   }
 }
 

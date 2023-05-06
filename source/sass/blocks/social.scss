@@ -4,15 +4,20 @@
 .social__list {
   @include mixins.list-reset;
   min-width: 154px;
+  max-width: 540px;
   display: flex;
   justify-content: space-between;
   gap: 6px;
+  flex-wrap: wrap;
 }
 
 .social__item {
   width: 48px;
   height: 48px;
   background-color: variables.$background-color-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background-color: variables.$background-hover;
@@ -25,29 +30,14 @@
 }
 
 .social__link {
-  position: relative;
+  padding: 15px 12px;
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    width: 24px;
-    height: 24px;
-    left: 50%;
-    top: 50%;
-    transform: translate(50%, 50%);
-    background-repeat: no-repeat;
-    background-position: center center;
+.social__icon {
+  color: variables.$background-color-white;
+
+  &:active,
+  :focus {
+    color: transparentize(variables.$background-color-white, 0.7);
   }
-}
-
-.social__link--vk::before {
-  background-image: url("../img/vk.svg");
-}
-
-.social__link--tg::before {
-  background-image: url("../img/telegram.svg");
-}
-
-.social__link--youtube::before {
-  background-image: url("../img/youtube.svg");
 }

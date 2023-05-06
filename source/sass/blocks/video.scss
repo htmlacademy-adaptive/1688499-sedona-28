@@ -12,12 +12,12 @@
 }
 
 .video__description {
-  padding: 15px 26px 38px 28px;
+  padding: 17px 26px 38px 28px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
     width: 445px;
-    padding: 51px 0 85px;
+    padding: 57px 0 91px;
     margin: 0 auto;
   }
 
@@ -30,10 +30,11 @@
   @include mixins.texts (700, 18px, 26px);
   color: variables.$title-color-black;
   margin: 0;
-  padding-bottom: 32px;
+  padding-bottom: 28px;
 
   @media (min-width: variables.$tablet-width) {
     @include mixins.texts (700, 30px, 26px);
+    padding-bottom: 33px;
   }
 }
 
