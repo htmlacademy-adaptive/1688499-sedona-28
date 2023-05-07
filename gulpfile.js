@@ -60,7 +60,7 @@ const copyImages = () => {
 
 //WEBP
 const createWebp = () => {
-  return gulp.src('source/img/**/*.{jpg,png}')
+  return gulp.src(['source/img/**/*.{jpg,png}', '!source/img/favicons/*.png'])
   .pipe(squoosh({
     webp: {}
   }))
@@ -69,7 +69,7 @@ const createWebp = () => {
 
 //SVG
 const svg = () =>
-  gulp.src (['source/img/*.svg', '!source/img/icons/*.svg'])
+  gulp.src (['source/img/**/*.svg', '!source/img/icons/*.svg'])
   .pipe(svgo())
   .pipe(gulp.dest('build/img'));
 
@@ -127,7 +127,8 @@ const reload = (done) => {
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/js/script.js', gulp.series(scripts));
-  gulp.watch('source/*.html').on('change', browser.reload);
+  //gulp.watch('source/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html', gulp.series(html, reload));
 }
 
 //Build
