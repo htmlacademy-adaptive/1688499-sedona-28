@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона - Фото и видео</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -55,6 +55,9 @@
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-1-desktop.webp 1x, img/catalog/catalog-photo-1-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-photo-1-tablet.webp 1x, img/catalog/catalog-photo-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/catalog-photo-1-mobile.webp 1x, img/catalog/catalog-photo-1-mobile@2x.webp 2x">
               <source media="(min-width:1200px)"
               srcset="img/catalog/catalog-photo-1-desktop.jpg 1x, img/catalog/catalog-photo-1-desktop@2x.jpg 2x">
               <source media="(min-width:768px)"
@@ -67,8 +70,8 @@
               <h2 class="catalog__item-title">Неродные просторы</h2>
               <p class="catalog__item-author">Автор фото: Борис</p>
             </div>
-            <button class="catalog__item-likes like">
-              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21">
+            <button class="catalog__item-likes like" aria-label="Поставить лайк фотографии">
+              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" aria-hidden="true">
                 <use href="img/sprite.svg#icon-like"></use>
               </svg>
               <span class="like__number">1350</span>
@@ -78,6 +81,9 @@
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-2-desktop.webp 1x, img/catalog/catalog-photo-2-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-photo-2-tablet.webp 1x, img/catalog/catalog-photo-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/catalog-photo-2-mobile.webp 1x, img/catalog/catalog-photo-2-mobile@2x.webp 2x">
               <source media="(min-width:1200px)"
               srcset="img/catalog/catalog-photo-2-desktop.jpg 1x, img/catalog/catalog-photo-2-desktop@2x.jpg 2x">
               <source media="(min-width:768px)"
@@ -90,8 +96,8 @@
               <h2 class="catalog__item-title">Местная растительность</h2>
               <p class="catalog__item-author">Автор фото: Сергей</p>
             </div>
-            <button class="catalog__item-likes like">
-              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21">
+            <button class="catalog__item-likes like" aria-label="Поставить лайк фотографии">
+              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" aria-hidden="true">
                 <use href="img/sprite.svg#icon-like"></use>
               </svg>
               <span class="like__number">143</span>
@@ -101,6 +107,9 @@
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-3-desktop.webp 1x, img/catalog/catalog-photo-3-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-photo-3-tablet.webp 1x, img/catalog/catalog-photo-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/catalog-photo-3-mobile.webp 1x, img/catalog/catalog-photo-3-mobile@2x.webp 2x">
               <source media="(min-width:1200px)"
               srcset="img/catalog/catalog-photo-3-desktop.jpg 1x, img/catalog/catalog-photo-3-desktop@2x.jpg 2x">
               <source media="(min-width:768px)"
@@ -113,8 +122,8 @@
               <h2 class="catalog__item-title">Дорога на север</h2>
               <p class="catalog__item-author">Автор фото: Петр</p>
             </div>
-            <button class="catalog__item-likes like">
-              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21">
+            <button class="catalog__item-likes like" aria-label="Поставить лайк фотографии">
+              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" aria-hidden="true">
                 <use href="img/sprite.svg#icon-like"></use>
               </svg>
               <span class="like__number">96</span>
@@ -124,6 +133,9 @@
         <li class="catalog__item">
           <a class="catalog__item-link" href="#">
             <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/catalog/catalog-photo-4-desktop.webp 1x, img/catalog/catalog-photo-4-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/catalog-photo-4-tablet.webp 1x, img/catalog/catalog-photo-4-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/catalog/catalog-photo-4-mobile.webp 1x, img/catalog/catalog-photo-4-mobile@2x.webp 2x">
               <source media="(min-width:1200px)"
               srcset="img/catalog/catalog-photo-4-desktop.jpg 1x, img/catalog/catalog-photo-4-desktop@2x.jpg 2x">
               <source media="(min-width:768px)"
@@ -136,8 +148,8 @@
               <h2 class="catalog__item-title">Мост дьявола</h2>
               <p class="catalog__item-author">Автор фото: Антон</p>
             </div>
-            <button class="catalog__item-likes like">
-              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21">
+            <button class="catalog__item-likes like" aria-label="Поставить лайк фотографии">
+              <svg class="like__icon" width="23" height="21" viewBox="0 0 23 21" aria-hidden="true">
                 <use href="img/sprite.svg#icon-like"></use>
               </svg>
               <span class="like__number">254</span>
@@ -153,6 +165,9 @@
       </div>
       <div class="video__wrapper">
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/video/video-desktop.webp 1x, img/video/video-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/video/video-tablet.webp 1x, img/video/video-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/video/video-mobile.webp 1x, img/video/video-mobile@2x.webp 2x">
           <source media="(min-width:1200px)"
           srcset="img/video/video-desktop.jpg 1x, img/video/video-desktop@2x.jpg 2x">
           <source media="(min-width:768px)"
@@ -173,7 +188,7 @@
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы Вконтакте</span>
-              <svg class="social__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg class="social__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <use href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
@@ -181,7 +196,7 @@
           <li class="social__item">
             <a class="social__link social__link--tg" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы в Telegram</span>
-              <svg class="social__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg class="social__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor">
                 <use href="img/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
@@ -189,7 +204,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <span class="visually-hidden">Мы в YouTube</span>
-              <svg class="social__icon" width="20" height="14" viewBox="0 0 20 14" fill="none">
+              <svg class="social__icon" aria-hidden="true" width="20" height="14" viewBox="0 0 20 14" fill="none">
                 <use href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -200,7 +215,7 @@
         <h2 class="visually-hidden">Сайт сделан</h2>
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="main-footer__copyright-text">Разработано</span>
-          <svg class="main-footer__copyright-logo" width="29" height="35" viewBox="0 0 29 35" fill="none">
+          <svg class="main-footer__copyright-logo" aria-hidden="true" width="29" height="35" viewBox="0 0 29 35" fill="none">
             <use href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>

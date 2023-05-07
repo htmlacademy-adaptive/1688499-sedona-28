@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
@@ -141,6 +141,8 @@
       referrerpolicy="no-referrer-when-downgrade"
       title="Карта города Седона"></iframe>
         <picture>
+          <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
+          <source type="image/webp" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
           <source media="(min-width:1200px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
           <img class="map__image" src="img/map/map-tablet.jpg" srcet="img/map/map-tablet@2x.jpg 2x" alt="Карта Седоны" width="320" height="350" >
         </picture>
@@ -156,7 +158,7 @@
           <li class="social__item">
             <a class="social__link social__link--vk" href="https://vk.com/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы Вконтакте</span>
-              <svg class="social__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg class="social__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="white">
                 <use href="img/sprite.svg#icon-vk"></use>
               </svg>
             </a>
@@ -164,7 +166,7 @@
           <li class="social__item">
             <a class="social__link social__link--tg" href="https://t.me/htmlacademy" target="_blank">
               <span class="visually-hidden">Мы в Telegram</span>
-              <svg class="social__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <svg class="social__icon" aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor">
                 <use href="img/sprite.svg#icon-telegram"></use>
               </svg>
             </a>
@@ -172,7 +174,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank">
               <span class="visually-hidden">Мы в YouTube</span>
-              <svg class="social__icon" width="20" height="14" viewBox="0 0 20 14" fill="none">
+              <svg class="social__icon" aria-hidden="true" width="20" height="14" viewBox="0 0 20 14" fill="none">
                 <use href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -183,7 +185,7 @@
         <h2 class="visually-hidden">Сайт сделан</h2>
         <a class="main-footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="main-footer__copyright-text">Разработано</span>
-          <svg class="main-footer__copyright-logo" width="29" height="35" viewBox="0 0 29 35" fill="none">
+          <svg class="main-footer__copyright-logo" aria-hidden="true" width="29" height="35" viewBox="0 0 29 35" fill="none">
             <use href="img/sprite.svg#logo-htmlacademy"></use>
           </svg>
         </a>
