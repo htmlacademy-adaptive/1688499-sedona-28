@@ -34,10 +34,11 @@
 }
 
 .social__icon {
-  color: variables.$background-color-white;
+  //color: variables.$background-color-white;
+  fill: variables.$background-color-white;
 
   &:active,
   :focus {
-    color: transparentize(variables.$background-color-white, 0.7);
+    fill: transparentize(variables.$background-color-white, 0.7);
   }
 }

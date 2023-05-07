@@ -124,7 +124,12 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }
+
 
 .main-nav--closed .main-nav__toggle {
   @media (max-width: variables.$mobile-only) {
