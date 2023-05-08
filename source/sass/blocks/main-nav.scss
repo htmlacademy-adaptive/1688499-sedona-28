@@ -158,7 +158,6 @@
 
 .main-nav--opened .main-nav__toggle {
   @media (max-width: variables.$mobile-only) {
-    //z-index: 2;
     z-index: 10;
 
     &::before,

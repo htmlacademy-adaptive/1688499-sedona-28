@@ -3,7 +3,7 @@
 
 .button {
   @include mixins.texts (700, 21px, 26px);
-  font-family: "PT Sans", Arial, sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   background-color: variables.$background-color-blue;
   color: variables.$text-color-second;
   border: none;
