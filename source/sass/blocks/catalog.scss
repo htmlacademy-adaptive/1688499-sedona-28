@@ -103,8 +103,6 @@
 }
 
 .catalog__item-text--first {
-  //padding: 16px 20px 7px 0;
-
   @media (min-width: variables.$tablet-width) {
     padding: 23px 20px 8px 20px;
   }
@@ -154,7 +152,6 @@
   cursor: pointer;
 
   @media (min-width: variables.$tablet-width) {
-    //padding: 0 0 0 33px;
     margin-bottom: 10px;
   }
 

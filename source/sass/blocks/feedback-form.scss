@@ -7,7 +7,6 @@
   @media (min-width: variables.$tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    //column-gap: 35px;
     padding: 0 60px;
   }
 
@@ -45,7 +44,6 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    //margin-top: 6px;
     margin-top: 0;
 
     &:nth-child(n + 3) {
@@ -101,11 +99,7 @@
   color: variables.$title-color-black;
   text-align: center;
   background-color: variables.$background-color-white;
-  //padding: 24px 0 0;
-  //border-top: 1px solid variables.$border-light-grey;
   width: 100%;
-  //margin-top: 24px;
-  //margin-bottom: 20px;
   margin: 0;
   position: relative;
 
@@ -142,7 +136,6 @@
   @include mixins.texts (700, 18px, 26px, none);
   font-family: inherit;
   background-color: variables.$background-input;
-  //height: 58px;
   width: 100%;
   padding: 16px;
   border: none;
@@ -227,7 +220,6 @@
     grid-template-columns: repeat(2, 1fr);
 
     &--radio {
-      //padding: 30px 15px 20px 37px;
       padding: 42px 15px 47px 37px;
     }
 

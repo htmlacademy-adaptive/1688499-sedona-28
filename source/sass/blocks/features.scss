@@ -67,7 +67,7 @@
   }
 
   &--house::before {
-    background-image: url(../img/icon-house.svg);
+    background-image: url("../img/icon-house.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -92,7 +92,7 @@
   }
 
   &--food::before {
-    background-image: url(../img/icon-food.svg);
+    background-image: url("../img/icon-food.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -115,15 +115,13 @@
   }
 
   &--gift::before {
-    background-image: url(../img/icon-gift.svg);
+    background-image: url("../img/icon-gift.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
   }
 
   @media (min-width: variables.$tablet-width) {
-    //padding-top: 89px;
-
     &--gift::before {
       width: 66px;
       height: 75px;
@@ -135,7 +133,6 @@
 
     &::before {
       width: 77px;
-      //height: 75px;
     }
   }
 }

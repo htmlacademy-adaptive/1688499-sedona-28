@@ -6,11 +6,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/ptsans.woff" as="font" type="font/woff" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicons/apple.png">
   <link rel="manifest" href="manifest.webmanifest">
-
 </head>
 
 <body class="page__body">
@@ -69,7 +70,7 @@
               srcset="img/advantages/advantages-city-desktop.jpg 1x, img/advantages/advantages-city-desktop@2x.jpg 2x">
               <source media="(min-width:768px)"
               srcset="img/advantages/advantages-city-tablet.jpg 1x, img/advantages/advantages-city-tablet@2x.jpg 2x">
-              <img class="advantages__image" src="img/advantages/advantages-city-mobile.jpg" srcet="img/advantages/advantages-city-mobile@2x.jpg 2x" alt="Кафе в Седоне" width="320" height="260">
+              <img class="advantages__image" loading="lazy" src="img/advantages/advantages-city-mobile.jpg" srcet="img/advantages/advantages-city-mobile@2x.jpg 2x" alt="Кафе в Седоне" width="320" height="260">
             </picture>
           </div>
           <ul class="features">
@@ -107,7 +108,7 @@
                srcset="img/advantages/advantages-bridge-desktop.jpg 1x, img/advantages/advantages-bridge-desktop@2x.jpg 2x">
                <source media="(min-width:768px)"
                srcset="img/advantages/advantages-bridge-tablet.jpg 1x, img/advantages/advantages-bridge-tablet@2x.jpg 2x">
-               <img class="advantages__image advantages__image--reverse" src="img/advantages/advantages-bridge-mobile.jpg" srcet="img/advantages/advantages-bridge-mobile@2x.jpg 2x" alt="Горный пейзаж рядом с Седоной" width="320" height="260">
+               <img class="advantages__image advantages__image--reverse" loading="lazy" src="img/advantages/advantages-bridge-mobile.jpg" srcet="img/advantages/advantages-bridge-mobile@2x.jpg 2x" alt="Горный пейзаж рядом с Седоной" width="320" height="260">
             </picture>
             </div>
         </li>
@@ -144,7 +145,7 @@
           <source type="image/webp" media="(min-width: 1200px)" srcset="img/map/map-desktop.webp 1x, img/map/map-desktop@2x.webp 2x">
           <source type="image/webp" srcset="img/map/map-tablet.webp 1x, img/map/map-tablet@2x.webp 2x">
           <source media="(min-width:1200px)" srcset="img/map/map-desktop.jpg 1x, img/map/map-desktop@2x.jpg 2x">
-          <img class="map__image" src="img/map/map-tablet.jpg" srcet="img/map/map-tablet@2x.jpg 2x" alt="Карта Седоны" width="320" height="350" >
+          <img class="map__image" loading="lazy" src="img/map/map-tablet.jpg" srcet="img/map/map-tablet@2x.jpg 2x" alt="Карта Седоны" width="320" height="350" >
         </picture>
     </section>
     </main>
