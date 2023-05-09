@@ -48,12 +48,11 @@
 
     &:nth-child(n + 3) {
       grid-column: 1 / -1;
-      border-top: 1px solid variables.$border-light-grey;
     }
 
     &:nth-child(1) {
       padding: 30px 30px 0 0;
-      margin-bottom: 71px;
+      margin-bottom: 61px;
       border-right: 1px solid variables.$border-grey;
     }
 
@@ -66,7 +65,7 @@
     }
 
     &:nth-child(5) {
-      padding-top: 41px;
+      padding-top: 28px;
       margin-top: 0;
     }
   }
@@ -74,7 +73,7 @@
   @media (min-width: variables.$desktop-width) {
     &:nth-child(1) {
       padding: 26px 50px 0 0;
-      margin-bottom: 84px;
+      margin-bottom: 73px;
       border-right: 1px solid variables.$border-grey;
     }
 
@@ -86,11 +85,41 @@
 
 .feedback-form__field-group:nth-child(n+3) > .feedback-form__legend {
   @media (min-width: variables.$tablet-width) {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 400px;
-    transform: translate(-50%, -50%);
+    padding: 0 132px 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 123px;
+      height: 1px;
+      top: calc((100% - 4px) / 2);
+      left: 0;
+      background-color: variables.$border-light-grey;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 123px;
+      height: 1px;
+      top: calc((100% - 4px) / 2);
+      right: 0;
+      background-color: variables.$border-light-grey;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 290px 0;
+
+    &::before {
+      width: 280px;
+      top: calc((100% - 4px) / 2);
+    }
+
+    &::after {
+      width: 280px;
+      top: calc((100% - 4px) / 2);
+    }
   }
 }
 
@@ -176,7 +205,7 @@
     &--textarea {
       width: 768px;
       margin: 0 auto;
-      margin-bottom: 45px;
+      margin-bottom: 49px;
     }
   }
 }
@@ -220,11 +249,11 @@
     grid-template-columns: repeat(2, 1fr);
 
     &--radio {
-      padding: 42px 15px 47px 37px;
+      padding: 29px 15px 20px 37px;
     }
 
     &--checkbox {
-      padding: 37px 47px 13px 83px;
+      padding: 10px 47px 2px 83px;
     }
   }
 
@@ -232,13 +261,13 @@
     &--radio {
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 22px;
-      padding: 60px 0 70px 55px;
+      padding: 45px 0 46px 55px;
     }
 
     &--checkbox {
       grid-template-columns: repeat(4, auto);
       grid-gap: 64px;
-      padding: 67px 43px 62px 46px;
+      padding: 40px 43px 49px 46px;
     }
   }
 }
@@ -342,7 +371,7 @@
   @media (min-width: variables.$desktop-width) {
     width: 768px;
     margin: 0 auto;
-    padding-bottom: 62px;
+    padding-bottom: 60px;
   }
 }
 

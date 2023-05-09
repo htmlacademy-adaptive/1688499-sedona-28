@@ -77,7 +77,7 @@
 }
 
 .catalog__item:nth-child(odd):not(:first-child) .catalog__item-text {
-  @media (min-width: variables.$tablet-width) and (max-width: variables.$desktop-width - 1) {
+  @media (min-width: variables.$tablet-width) and (max-width: 1199.98px) {
     background-color: variables.$background-catalog;
   }
 }
